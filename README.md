@@ -1,5 +1,5 @@
 # Frontend-Knowledge-Architecture
-前端知识架构
+前端基础知识架构
 # 在阅读前请了解HTML,CSS,JavaScript,Jquery等基本知识
 作者: MINGNC
 开始时间:2020年01月27号
