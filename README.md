@@ -8,3 +8,7 @@
 # TypeScript
 学习视频地址:https://www.bilibili.com/video/av38379328 (老师讲的很棒，就是普通话不太6，哈哈～)
 ### (其他人的视频)
+
+# Angular8
+学习视频地址:https://www.bilibili.com/video/av38362631
+### (其他人的视频)
