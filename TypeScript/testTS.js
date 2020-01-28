@@ -1,41 +1,136 @@
 /**
  * 代码测试文件
  */
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+// enum Color {
+//     blue, red, 'orange'
+// };
+// var c: Color = Color.red;
+// console.log(c);   //1  如果标识符没有赋值 它的值就是下标
+// enum Color {
+//     blue, red = 3, 'orange'
+// };
+// var c: Color = Color.blue;
+// console.log(c); //0
+// var c: Color = Color.red;
+// console.log(c);   //3
+// var c: Color = Color.orange;
+// console.log(c);   //4
+// function getInfo(name: string, age?: number): void {
+//     console.log(name)
+//     if (age) {
+//         console.log(age)
+//     }
+// }
+// function func(...result: number[]): void {
+//     for (let i of result) {
+//         console.log(i)
+//     }
+// }
+// func(1, 2, 3, 4, 5)
+// class Person {
+//     constructor(parameters) {
+//     }
+// }
+// class PersonTest {
+//     name: string;
+//     constructor(name: string) {
+//         this.name = name;
+//     }
+//     run(): string {
+//         return `${this.name}在运动`
+//     }
+// }
+// let m = new PersonTest('王五');
+// console.log(m.run())
+// class Web extends PersonTest {
+//     constructor(name: string) {
+//         super(name); //初始化父类的构造函数
+//     }
+//     run(): string {
+//         return `${this.name}在运动-子类`
+//     }
+//     work(): void {
+//         console.log(`${this.name}在工作`)
+//     }
+// }
+// var w = new Web('李四');
+// // console.log(w.run());
+// // w.work();
+// console.log(w.run());
+// class PerTest {
+//     public name: string;
+//     public age: number = 20;
+//     static sex = "男"; //静态属性
+//     constructor(name: string) {
+//         this.name = name;
+//     }
+//     run() {  //实例方法
+//         console.log(`${this.name}在运动`)
+//     }
+//     work() {
+//         console.log(`${this.name}在工作`)
+//     }
+//     static print() {  //静态方法  里面没法直接调用类里面的属性
+//         console.log('print方法2' + PerTest.sex);
+//     }
+// }
+// // var p = new PerTest('张三');
+// // p.run();
+// PerTest.print();
+// console.log(PerTest.sex);
+// interface Animal {
+//     eat(): void;
+// }
+// interface Person extends Animal {
+//     work(): void;
+// }
+// class Programmer {
+//     public name: string;
+//     constructor(name: string) {
+//         this.name = name;
+//     }
+//     coding(code: string) {
+//         console.log(this.name + code)
+//     }
+// }
+// class Web extends Programmer implements Person {
+//     constructor(name: string) {
+//         super(name)
+//     }
+//     eat() {
+//         console.log(this.name + '喜欢吃馒头')
+//     }
+//     work() {
+//         console.log(this.name + '写代码');
+//     }
+// }
+// var w = new Web('小李');
+// w.eat();
+// w.coding('写ts代码');
+function logClassTest(params) {
+    console.log(params);
+    // params 就是当前类
+    params.prototype.apiUrl = '动态扩展的属性';
+    params.prototype.run = function () {
+        console.log('我是一个run方法');
     };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var Programmer = /** @class */ (function () {
-    function Programmer(name) {
-        this.name = name;
+}
+var HttpClientTest = /** @class */ (function () {
+    function HttpClientTest() {
     }
-    Programmer.prototype.coding = function (code) {
-        console.log(this.name + code);
+    HttpClientTest.prototype.getData = function () {
     };
-    return Programmer;
+    HttpClientTest = __decorate([
+        logClassTest
+    ], HttpClientTest);
+    return HttpClientTest;
 }());
-var Web = /** @class */ (function (_super) {
-    __extends(Web, _super);
-    function Web(name) {
-        return _super.call(this, name) || this;
-    }
-    Web.prototype.eat = function () {
-        console.log(this.name + '喜欢吃馒头');
-    };
-    Web.prototype.work = function () {
-        console.log(this.name + '写代码');
-    };
-    return Web;
-}(Programmer));
-var w = new Web('小李');
-w.eat();
-w.coding('写ts代码');
+var httpTest = new HttpClientTest();
+console.log(httpTest.apiUrl);
+httpTest.run();

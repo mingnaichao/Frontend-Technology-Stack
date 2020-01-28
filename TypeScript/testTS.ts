@@ -94,38 +94,59 @@
 // PerTest.print();
 // console.log(PerTest.sex);
 
-interface Animal {
-    eat(): void;
-}
+// interface Animal {
+//     eat(): void;
+// }
 
-interface Person extends Animal {
-    work(): void;
-}
+// interface Person extends Animal {
+//     work(): void;
+// }
 
-class Programmer {
-    public name: string;
-    constructor(name: string) {
-        this.name = name;
-    }
-    coding(code: string) {
-        console.log(this.name + code)
-    }
-}
+// class Programmer {
+//     public name: string;
+//     constructor(name: string) {
+//         this.name = name;
+//     }
+//     coding(code: string) {
+//         console.log(this.name + code)
+//     }
+// }
 
 
-class Web extends Programmer implements Person {
-    constructor(name: string) {
-        super(name)
-    }
-    eat() {
-        console.log(this.name + '喜欢吃馒头')
-    }
-    work() {
-        console.log(this.name + '写代码');
-    }
-}
+// class Web extends Programmer implements Person {
+//     constructor(name: string) {
+//         super(name)
+//     }
+//     eat() {
+//         console.log(this.name + '喜欢吃馒头')
+//     }
+//     work() {
+//         console.log(this.name + '写代码');
+//     }
+// }
 
-var w = new Web('小李');
-w.eat();
+// var w = new Web('小李');
+// w.eat();
 
-w.coding('写ts代码');
+// w.coding('写ts代码');
+
+// function logClassTest(params: any) {
+//     console.log(params);
+//     // params 就是当前类
+//     params.prototype.apiUrl = '动态扩展的属性';
+//     params.prototype.run = function () {
+//         console.log('我是一个run方法');
+//     }
+// }
+
+// @logClassTest
+// class HttpClientTest {
+//     constructor() {
+//     }
+//     getData() {
+
+//     }
+// }
+// var httpTest: any = new HttpClientTest();
+// console.log(httpTest.apiUrl);
+// httpTest.run();
