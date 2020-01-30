@@ -1,0 +1,73 @@
+<div class='box'>
+    <!-- 数据文本绑定 -->
+    <p>title</p>
+    <hr>
+    <!-- 引入图片 -->
+    <img src="assets/images/01.png" alt="收藏">
+    <img [src]='picUrl' alt="引入外部图片">
+    <hr>
+    <!-- *ngFor 循环数组，显示下标 -->
+    <ul>
+        <li *ngFor="let item of list; let i = index;">
+            {{i}}：{{item.title}}
+        </li>
+    </ul>
+    <hr>
+    <!-- *ngIf 条件判断 -->
+    <div *ngIf="flag">
+        <img src="assets/images/02.png" alt="">
+    </div>
+    <div *ngIf="!flag">
+        啥也没有
+    </div>
+    <hr>
+    <!-- *ngSwitch -->
+    <span [ngSwitch]="orderNumber">
+        <p *ngSwitchCase="1">
+            已支付
+        </p>
+        <p *ngSwitchCase="2">
+            支付并且确认订单
+        </p>
+        <p *ngSwitchCase="3">
+            已经收货
+        </p>
+        <p *ngSwitchDefault>
+            无效
+        </p>
+    </span>
+    <hr>
+    <!-- 执行事件 (click)="xxx" -->
+    <div>
+        <button class="button" (click)="getData();">获取数据</button>
+        <button class="button" (click)="setData();">修改数据</button>
+    </div>
+    <hr>
+    <!-- 表单事件 -->
+    <div>
+        表单事件
+        <input type="text" (keyup)="keyUpFunc($event)">
+        <input type="text" (keyup)="keyDownFunc($event)">
+    </div>
+    <hr>
+    <!-- 双向数据绑定 -->
+    <div>
+        双向数据绑定：<input type="text" [(ngModel)]="inputValue">
+        {{inputValue}}
+    </div>
+    <hr>
+    <!-- ngClass ngStyle -->
+    <div>
+        ngClass:
+        <div [ngClass]="{'red-color': true}">这是一个红div</div>
+        <div [ngClass]="{'blue-color': blue}">这是一个蓝div</div>
+        ngStyle:
+        <div [ngStyle]="{'background-color':'green'}">你好 ngStyle</div>
+        <div [ngStyle]="{'background-color':orangeCol}">你好 ngStyle</div>
+    </div>
+    <!-- 管道 -->
+    <div>
+        管道：(其他管道http://bbs.itying.com/topic/5bf519657e9f5911d41f2a34)
+        <p>{{today | date:'yyyy-MM-dd HH:mm:ss'}}</p>
+    </div>
+</div>
