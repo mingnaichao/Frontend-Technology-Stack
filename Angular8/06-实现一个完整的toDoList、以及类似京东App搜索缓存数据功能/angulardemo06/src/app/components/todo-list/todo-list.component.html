@@ -1,1 +1,17 @@
-<p>todo-list works!</p>
+<h2>todoList</h2>
+<div class="todo-list">
+    <input type="text" class="form-input" [(ngModel)]="keyWord" (keyup)="toAdd($event)">
+    <hr>
+    <h3>待办事项</h3>
+    <ul>
+        <li *ngFor="let item of todoList; let i = index;" [hidden]="item.status">
+            <input type="checkbox" [(ngModel)]="item.status">{{item.title}}&nbsp;&nbsp;&nbsp;<button
+                (click)="deleteWord(i)">x</button></li>
+    </ul>
+    <h3>已完成事项</h3>
+    <ul>
+        <li *ngFor="let item of todoList; let i = index;" [hidden]="!item.status">
+            <input type="checkbox" [(ngModel)]="item.status">{{item.title}}&nbsp;&nbsp;&nbsp;<button
+                (click)="deleteWord(i)">x</button></li>
+    </ul>
+</div>
