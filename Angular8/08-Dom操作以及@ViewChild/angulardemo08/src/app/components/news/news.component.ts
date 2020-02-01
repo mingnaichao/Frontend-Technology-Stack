@@ -15,14 +15,14 @@
       this.myBox.nativeElement
 */
 
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-news',
   templateUrl: './news.component.html',
   styleUrls: ['./news.component.scss']
 })
-export class NewsComponent implements OnInit {
+export class NewsComponent implements OnInit, AfterViewInit {
 
   // 获取dom节点
   @ViewChild('myBox', { static: false }) myBox: any;

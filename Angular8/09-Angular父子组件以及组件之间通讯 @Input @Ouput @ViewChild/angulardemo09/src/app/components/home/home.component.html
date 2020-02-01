@@ -1,0 +1,2 @@
+<app-header [parentMsg]='parentMsg' #childMsg (outer)='getChildSendMsg($event)'></app-header>
+<button (click)="getChildInfo()">通过@ViewChild方式获取子组件信息</button>
