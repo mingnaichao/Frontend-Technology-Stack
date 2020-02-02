@@ -1,0 +1,16 @@
+<p>news works!</p>
+<hr>
+<a [routerLink]="[ '/newscontent' ]">跳转到新闻详情</a>
+<hr>
+
+<!-- <ul>
+    <li *ngFor="let item of data;let i=index;">
+        <a [routerLink]="[ '/newscontent' ]" [queryParams]="{aid:i}">{{i}} -- {{item}}</a>
+    </li>
+</ul> -->
+
+<ul>
+    <li *ngFor="let item of data;let i=index;">
+        <a [routerLink]="[ '/newscontent', i]">{{i}} -- {{item}}</a>
+    </li>
+</ul>
