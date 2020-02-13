@@ -26,9 +26,7 @@ export class SearchComponent implements OnInit {
   public keyWord: string;
   public historyList: any[] = [];
 
-  public storage: StorageService;
-  constructor(storage: StorageService) {
-    this.storage = storage;
+  constructor(public storage: StorageService) {
     console.log(this.storage);
   }
 

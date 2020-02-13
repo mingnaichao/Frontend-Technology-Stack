@@ -10,10 +10,8 @@ export class TodoListComponent implements OnInit {
 
   public keyWord: string;
   public todoList: any[] = [];
-  public storage: StorageService;
 
-  constructor(storage: StorageService) {
-    this.storage = storage;
+  constructor(public storage: StorageService) {
   }
 
   ngOnInit() {
