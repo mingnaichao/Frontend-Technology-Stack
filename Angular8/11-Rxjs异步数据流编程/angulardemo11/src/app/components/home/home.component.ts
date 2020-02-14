@@ -9,9 +9,7 @@ import { filter, map } from 'rxjs/operators';
 })
 export class HomeComponent implements OnInit {
 
-    public request: RequestService;
-    constructor(request: RequestService) {
-        this.request = request;
+    constructor(public request: RequestService) {
     }
 
     ngOnInit() {

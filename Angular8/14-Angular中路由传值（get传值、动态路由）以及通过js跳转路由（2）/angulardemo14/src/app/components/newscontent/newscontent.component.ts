@@ -46,10 +46,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class NewscontentComponent implements OnInit {
 
-    public route: ActivatedRoute;
-    constructor(route: ActivatedRoute) {
-        this.route = route;
-    }
+    constructor(public route: ActivatedRoute) { }
 
     ngOnInit() {
         // get传值

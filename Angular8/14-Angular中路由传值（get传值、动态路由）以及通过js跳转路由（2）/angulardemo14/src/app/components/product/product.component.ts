@@ -32,13 +32,9 @@ import { Router } from '@angular/router';
 })
 export class ProductComponent implements OnInit {
 
-    public router: Router;
-    constructor(router: Router) {
-        this.router = router;
-    }
+    constructor(public router: Router) { }
 
-    ngOnInit() {
-    }
+    ngOnInit() { }
 
     goNewsContent() {
         // 路由跳转

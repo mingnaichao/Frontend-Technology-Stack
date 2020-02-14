@@ -9,15 +9,9 @@ import { HttpserviceService } from '../../services/httpservice.service';
 })
 export class NewsComponent implements OnInit {
 
-    public http: HttpClient;
-    public httpservice: HttpserviceService;
-    constructor(http: HttpClient, httpservice: HttpserviceService) {
-        this.http = http;
-        this.httpservice = httpservice;
-    }
+    constructor(public http: HttpClient, public httpservice: HttpserviceService) { }
 
-    ngOnInit() {
-    }
+    ngOnInit() { }
 
     // get请求
     getApi(): any {
@@ -30,10 +24,15 @@ export class NewsComponent implements OnInit {
     // post请求
     postApi(): any {
         const httpOptions = {
-            headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+            headers: new HttpHeaders({
+                'Content-Type': 'application/json'
+            })
         };
         const api = 'http://127.0.0.1:3000/doLogin';
-        this.http.post(api, { username: '张三', age: '20' }, httpOptions).subscribe((resp) => {
+        this.http.post(api, {
+            username: '张三',
+            age: '20'
+        }, httpOptions).subscribe((resp) => {
             console.log('post请求', resp);
         });
     }
