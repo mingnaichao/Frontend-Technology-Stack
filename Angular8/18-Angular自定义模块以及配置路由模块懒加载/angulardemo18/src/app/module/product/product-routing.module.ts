@@ -6,22 +6,24 @@ import { PcontentComponent } from './pcontent/pcontent.component';
 import { PlistComponent } from './plist/plist.component';
 
 const routes: Routes = [
-  {
-    path: '', component: ProductComponent,
-    children: [
-      {
-        path: 'cart', component: CartComponent
-      },
-      {
-        path: 'pcontent', component: PcontentComponent
-      }
-    ]
-  },
-  { path: 'plist', component: PlistComponent }
+    {
+        path: '', component: ProductComponent,
+        children: [
+            {
+                path: 'cart', component: CartComponent
+            },
+            {
+                path: 'pcontent', component: PcontentComponent
+            }
+        ]
+    },
+    {
+        path: 'plist', component: PlistComponent
+    }
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forChild(routes)],
+    exports: [RouterModule]
 })
 export class ProductRoutingModule { }

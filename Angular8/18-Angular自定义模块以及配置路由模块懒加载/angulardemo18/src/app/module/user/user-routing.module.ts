@@ -6,19 +6,19 @@ import { AddressComponent } from './components/address/address.component';
 
 
 const routes: Routes = [
-  {
-    path: '', component: UserComponent
-  },
-  {
-    path: 'profile', component: ProfileComponent
-  },
-  {
-    path: 'address', component: AddressComponent
-  }
+    {
+        path: '', component: UserComponent
+    },
+    {
+        path: 'profile', component: ProfileComponent
+    },
+    {
+        path: 'address', component: AddressComponent
+    }
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forChild(routes)],
+    exports: [RouterModule]
 })
 export class UserRoutingModule { }
