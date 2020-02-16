@@ -6,9 +6,9 @@
 最后更新时间:2020年02月16号
 
 # TypeScript
-基础教程视频:https://www.bilibili.com/video/av38379328 (老师讲的很棒，就是普通话不太6，哈哈～)
+* 基础教程视频:https://www.bilibili.com/video/av38379328 (老师讲的很棒，就是普通话不太6，哈哈～)
 
 
 # Angular8
-基础教程视频:https://www.bilibili.com/video/av38362631
-实战教程视频（雪球网）:https://www.bilibili.com/video/av88235495
+* 基础教程视频:https://www.bilibili.com/video/av38362631
+* 实战教程视频（雪球网）:https://www.bilibili.com/video/av88235495
