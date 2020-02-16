@@ -12,3 +12,4 @@
 # Angular8
 * 基础教程视频:https://www.bilibili.com/video/av38362631
 * 实战教程视频（雪球网）:https://www.bilibili.com/video/av88235495
+* 实战教程视频（网易云音乐）:https://www.bilibili.com/video/av70355308
