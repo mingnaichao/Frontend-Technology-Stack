@@ -1,7 +1,7 @@
 # Frontend-Knowledge-Architecture
 📚前端技术栈
 # 在阅读前请了解HTML,CSS,JavaScript,Jquery等基本知识
-作者: MINGNC
+作者: Maurice
 开始时间:2020年01月27号
 最后更新时间:2020年02月16号
 
