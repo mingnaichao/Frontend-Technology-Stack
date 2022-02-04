@@ -29,7 +29,8 @@
 <hr />
 <h1>angualr里面的数据循环</h1>
 <ul>
-    <li *ngFor="let item of arr">
+    <li *ngFor="let item of arr; let i = index;">
+        {{i}}
         {{item}}
     </li>
 </ul>
